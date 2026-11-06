@@ -18,3 +18,7 @@ print("센서 평균:", df["sensor_001"].mean())
 
 # 5. 양품과 불량품의 개수 확인
 print(df["result"].value_counts())
+
+# 6. 센서 데이터의 최대값과 최소값
+print("센서 최대값:", df["sensor_001"].max())
+print("센서 최소값:", df["sensor_001"].min())
