@@ -22,3 +22,14 @@ print(df["result"].value_counts())
 # 6. 센서 데이터의 최대값과 최소값
 print("센서 최대값:", df["sensor_001"].max())
 print("센서 최소값:", df["sensor_001"].min())
+
+
+# 7. 전체 제품 중 불량품의 비율 계산
+total_count = len(df) #전체 제품 개수
+fail_count = (df["result"] == "FAIL").sum() # 불량 제품인지 확인하고 불량 제품 개수를 계산
+
+fail_rate = (fail_count / total_count) * 100 #불량률 계산
+
+print("전체 제품 수:", total_count)
+print("불량품 수:", fail_count)
+print("불량률:", fail_rate, "%")
